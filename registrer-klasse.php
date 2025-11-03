@@ -8,15 +8,15 @@
 <h3>Registrer klasse </h3>
 
 <form method="post" action="" id="registrerklasseSkjema" name="registrerklasseSkjema">
-  Klassekode <input type="text" id="klassekode" name="postnr" required /> <br/>
-  Klassenavn <input type="text" id="klassenavn" name="poststed" required /> <br/>
+  Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
+  Klassenavn <input type="text" id="klassenavn" name="klassenavn" required /> <br/>
   Studentkode <input type="text" id="studentkode" name="studentkode" required /> <br/>
   <input type="submit" value="Registrer klasse" id="registrerklasseedKnapp" name="registrerklasseKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
 
 <?php 
-  if (isset($_POST ["registrerPoststedKnapp"]))
+  if (isset($_POST ["registrerklasseKnapp"]))
     {
       $klassekode=$_POST ["klassekode"];
       $klassenavn=$_POST ["klassenavn"];
