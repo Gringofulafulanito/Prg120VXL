@@ -10,7 +10,7 @@
 <form method="post" action="" id="registrerklasseSkjema" name="registrerklasseSkjema">
   Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
   Klassenavn <input type="text" id="klassenavn" name="klassenavn" required /> <br/>
-  Studentkode <input type="text" id="studentkode" name="studentkode" required /> <br/>
+  Studiumkode <input type="text" id="studentkode" name="studentkode" required /> <br/>
   <input type="submit" value="Registrer klasse" id="registrerklasseedKnapp" name="registrerklasseKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
@@ -22,7 +22,7 @@
       $klassenavn=$_POST ["klassenavn"];
       $studentkode=$_POST ["studentkode"];
 
-      if (!$klassekode || !$klassenavn || $studentkode )
+      if (!$klassekode || !$klassenavn || !$studentkode )
         {
           print ("B&aring;de klassekode, klassenavn og studentkode m&aring; fylles ut");
         }
@@ -44,7 +44,7 @@
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
-              print ("F&oslash;lgende klasse er n&aring; registrert: $klassekode $klassenavn $studentkode"); 
+              print ("F&oslash;lgende klasse er n&aring; registrert: $klassekode $klassenavn $studiumkode"); 
             }
         }
     }
