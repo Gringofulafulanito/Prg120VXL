@@ -20,7 +20,7 @@
     {
       $klassekode=$_POST ["klassekode"];
       $klassenavn=$_POST ["klassenavn"];
-      $studentkode=$_POST ("studentkode");
+      $studentkode=$_POST ["studentkode"];
 
       if (!$klassekode || !$klassenavn || $studentkode )
         {
