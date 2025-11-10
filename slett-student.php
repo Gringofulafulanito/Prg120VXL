@@ -13,9 +13,6 @@
   <?php include("dynamiske-funksjoner.php"); listeboksstudent(); ?> 
   </select>  <br/>
   <input type="submit" value="Velg student" id="velgStudentKnapp" name="velgStudentKnapp" /> 
-</form>
-
-
   <input type="submit" value="Slett student" name="slettStudentKnapp" id="slettStudentKnapp" /> 
 </form>
 
