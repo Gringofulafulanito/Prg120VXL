@@ -48,7 +48,7 @@ include("dynamiske-funksjoner.php");
             }
           else
             {
-              $sqlSetning="INSERT INTO student(brukernavn,fornavn,etternavn,klassekode) VALUES('$brukernavn','$fornavn','$etternavn','$klassekode);";
+              $sqlSetning="INSERT INTO student(brukernavn,fornavn,etternavn,klassekode) VALUES('$brukernavn','$fornavn','$etternavn','$klassekode');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
