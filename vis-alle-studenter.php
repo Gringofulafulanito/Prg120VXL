@@ -18,12 +18,12 @@
   for ($r=1;$r<=$antallRader;$r++)
     {
       $rad=mysqli_fetch_array($sqlResultat);  /* ny rad hentet fra sp�rringsresultatet */
-      $kbrukernavn=$rad["brukernavn"];        /* ELLER $klassekode=$rad[0]; */
+      $brukernavn=$rad["brukernavn"];        /* ELLER $klassekode=$rad[0]; */
       $fornavn=$rad["fornavn"]; 
       $setternavn=$rad["etternavn"];  /* ELLER $klasse=$rad[1]; */
       $klassekode=$rad["klassekode"];
 
-      print ("<tr> <td> $brukernavn </td> <td> $fornavn </td> <td> $etternav </td> <td> $klassekode </td> </tr>");
+      print ("<tr> <td> $brukernavn </td> <td> $fornavn </td> <td> $etternavn </td> <td> $klassekode </td> </tr>");
     }
   print ("</table>"); 
 ?>
