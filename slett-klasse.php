@@ -13,8 +13,8 @@ include("dynamiske-funksjoner.php");
 <form method="post" action="" id="slettklasseSkjema" name="slettklasseSkjema" onSubmit="return bekreft()">
  Klasse <select name="klasse" id="klasse">
 <?php print("<option value=''>velg klasse</option>");
-  listeboksKlasse();
-  print("<option value=''>velg klasse</option>");?> 
+  /*listeboksKlasse();*/
+  print("<option value=''>velg wsedrftgy</option>");?> 
   </select>  <br/> 
   rtfyguhij
   <input type="submit" value="Slett klasse" name="slettklasseKnapp" id="slettklasseKnapp" /> 
