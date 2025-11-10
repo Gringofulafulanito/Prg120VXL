@@ -1,4 +1,8 @@
 <?php
+
+function test() {
+    print("<option value=''>velg fvygbhng</option>");
+}
 function listeboksKlasse()
 {
   include("db-tilkobling.php");  /* tilkobling til database-server og valg av database utført */

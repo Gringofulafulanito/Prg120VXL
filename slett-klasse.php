@@ -14,9 +14,8 @@ include("dynamiske-funksjoner.php");
  Klasse <select name="klasse" id="klasse">
 <?php print("<option value=''>velg klasse</option>");
   /*listeboksKlasse();*/
-  print("<option value=''>velg wsedrftgy</option>");?> 
+  test();?>
   </select>  <br/> 
-  rtfyguhij
   <input type="submit" value="Slett klasse" name="slettklasseKnapp" id="slettklasseKnapp" /> 
 </form>
 
