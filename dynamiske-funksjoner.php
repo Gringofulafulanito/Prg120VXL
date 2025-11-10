@@ -1,6 +1,7 @@
 <?php
 function listeboksKlasse()
 {
+    print("hei");
   include("db-tilkobling.php");  /* tilkobling til database-server og valg av database utført */
 
   $sqlSetning="SELECT * FROM klasse ORDER BY klassekode;";
@@ -9,7 +10,7 @@ function listeboksKlasse()
 	
   $antallRader=mysqli_num_rows($sqlResultat);  /* antall rader i resultatet beregnet */
 
-  for ($r=0;$r<=$antallRader;$r++)
+  for ($r=1;$r<=$antallRader;$r++)
     {
       $rad=mysqli_fetch_array($sqlResultat);  /* ny rad hentet fra spørringsresultatet */
       $klasse=$rad["klassekode"]; 
