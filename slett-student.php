@@ -3,6 +3,7 @@
 /*  Programmet lager et skjema for å velge en student som skal slettes  
 /*  Programmet sletter den valgte studenten
 */
+include("dynamiske-funksjoner.php"); 
 ?> 
 
 <script src="funksjoner.js"> </script>
@@ -13,9 +14,8 @@
  Student 
   <select name="student" id="student">
 <?php print('<option value="">velg student</option>');
-include("dynamiske-funksjoner.php"); listeboksstudent(); ?> 
+listeboksstudent(); ?> 
   </select>  <br/>
-  <input type="submit" value="Velg student" id="velgStudentKnapp" name="velgStudentKnapp" /> 
   <input type="submit" value="Slett student" name="slettStudentKnapp" id="slettStudentKnapp" /> 
 </form>
 
