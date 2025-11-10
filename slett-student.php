@@ -10,8 +10,8 @@
 <h3>Slett student</h3>
 
 <form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema" onSubmit="return bekreft()">
-  Postnr <input type="text" id="student" name="student" required /> <br/>
-  <input type="submit" value="Slett student" name="slettStudentKnapp" id="slettPoststedKnapp" /> 
+  Student <input type="text" id="student" name="student" required /> <br/>
+  <input type="submit" value="Slett student" name="slettStudentKnapp" id="slettStudentKnapp" /> 
 </form>
 
 <?php
