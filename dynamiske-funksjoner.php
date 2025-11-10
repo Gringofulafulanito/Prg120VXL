@@ -3,7 +3,6 @@ function listeboksKlasse()
 {
   include("db-tilkobling.php");  /* tilkobling til database-server og valg av database utført */
 
-  print("hei");
   $sqlSetning="SELECT * FROM klasse ORDER BY klassekode;";
   $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen"); 
     /* SQL-setning sendt til database-serveren */
