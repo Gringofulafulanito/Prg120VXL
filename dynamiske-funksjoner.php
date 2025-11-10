@@ -1,7 +1,6 @@
 <?php
 function listeboksKlasse()
 {
-    print("hei");
   include("db-tilkobling.php");  /* tilkobling til database-server og valg av database utført */
 
   $sqlSetning="SELECT * FROM klasse ORDER BY klassekode;";
