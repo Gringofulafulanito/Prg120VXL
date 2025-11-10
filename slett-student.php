@@ -12,7 +12,7 @@
 <form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema" onSubmit="return bekreft()">
  Student 
   <select name="student" id="student">
-    <option value="">velg postnr</option>
+    <option value="">velg student</option>
 <?php include("dynamiske-funksjoner.php"); listeboksstudent(); ?> 
   </select>  <br/>
   <input type="submit" value="Velg student" id="velgStudentKnapp" name="velgStudentKnapp" /> 
