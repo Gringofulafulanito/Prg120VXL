@@ -36,11 +36,10 @@ function listeboksstudent()
   for ($r=1;$r<=$antallRader;$r++)
     {
       $rad=mysqli_fetch_array($sqlResultat);  /* ny rad hentet fra spørringsresultatet */
-      $student=$$rad["student"]; 
       $brukernavn=$rad["brukernavn"];
       
 
-      print("<option value='$student'>$brukernavn</option>");  /* ny verdi i listeboksen laget */
+      print("<option value='$brukernavn'>$brukernavn</option>");  /* ny verdi i listeboksen laget */
     }
 }
 
