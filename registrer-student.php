@@ -2,9 +2,7 @@
 /*
 /*  Programmet lager et html-skjema for å registrere et poststed
 /*  Programmet registrerer data (postnr og poststed) i databasen
-*
 */
-include("dynamiske-funksjoner.php"); 
 ?> 
 
 <h3>Registrer Student </h3>
@@ -13,11 +11,7 @@ include("dynamiske-funksjoner.php");
   brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
   fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
   etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
- Klasse <select name="klassekode" id="klassekode">
-<?php print("<option value=''>velg klasse</option>");
-  listeboksKlasse();?>
-  </select>  <br/> 
-
+  klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
   <input type="submit" value="Registrer student" id="registrerstudentdKnapp" name="registrerstudentdKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
@@ -25,20 +19,20 @@ include("dynamiske-funksjoner.php");
 <?php 
   if (isset($_POST["registrerstudentdKnapp"]))
     {
-      $brukernavn=$_POST["brukernavn"];
-      $fornavn=$_POST["fornavn"];
-      $etternavn=$_POST["etternavn"];
-      $klassekode=$_POST["klassekode"];
+      $brukernavn=$_POST ["brukernavn"];
+      $fornavn=$_POST ["fornavn"];
+      $etternavn=$_POST ["etternavn"];
+      $klassekode=$_POST ["klassekode"];
 
-      if (!$brukernavn || !$fornavn || !$etternavn || !$klassekode)
+      if (!$brukernavn || !$fornavn || !$etternavn || !$klassekode )
         {
-          print ("B&aring;de brukernavn, fornavn, etternavn og studentkode m&aring; fylles ut");
+          print ("B&aring;de brukernavn, fornavn, etternavn og klassekode m&aring; fylles ut");
         }
       else
         {
           include("db-tilkobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
 
-          $sqlSetning="SELECT * FROM student";
+          $sqlSetning="SELECT * FROM student WHERE brukernavn = '$brukernavn';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
@@ -48,7 +42,7 @@ include("dynamiske-funksjoner.php");
             }
           else
             {
-              $sqlSetning="INSERT INTO student(brukernavn,fornavn,etternavn,klassekode) VALUES('$brukernavn','$fornavn','$etternavn','$klassekode');";
+              $sqlSetning="INSERT INTO student VALUES('$brukernavn','$fornavn','$etternavn','$klassekode');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
