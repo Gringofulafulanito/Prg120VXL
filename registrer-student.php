@@ -5,7 +5,7 @@
 */
 ?> 
 
-<h3>Registrer klasse </h3>
+<h3>Registrer Student </h3>
 
 <form method="post" action="" id="registrerStudentSkjema" name="registrerStudentSkjema">
   brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
