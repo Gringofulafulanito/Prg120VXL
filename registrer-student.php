@@ -12,12 +12,12 @@
   fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
   etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
   klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
-  <input type="submit" value="Registrer student" id="registrerstudentdKnapp" name="registrerstudentKnapp" /> 
+  <input type="submit" value="Registrer student" id="registrerstudentdKnapp" name="registrerstudentdKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
 
 <?php 
-  if (isset($_POST ["registrerstudenterKnapp"]))
+  if (isset($_POST["registrerstudentdKnapp"]))
     {
       $brukernavn=$_POST["brukernavn"];
       $fornavn=$_POST["fornavn"];
