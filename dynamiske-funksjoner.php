@@ -9,7 +9,7 @@ function listeboksKlasse()
 	
   $antallRader=mysqli_num_rows($sqlResultat);  /* antall rader i resultatet beregnet */
 
-  for ($r=1;$r<=$antallRader;$r++)
+  for ($r=0;$r<=$antallRader;$r++)
     {
       $rad=mysqli_fetch_array($sqlResultat);  /* ny rad hentet fra spørringsresultatet */
       $klasse=$rad["klassekode"]; 
@@ -17,7 +17,6 @@ function listeboksKlasse()
       $studiumkode=$rad("studentkode");
 
       print("<option value='$klasse'>$klassenavn $studiumkode</option>");  /* ny verdi i listeboksen laget */
-    printf("<option value='$klasse'>$klassenavn $studiumkode</option>");
     }
 }
 

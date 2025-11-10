@@ -13,7 +13,7 @@
  Klasse
   <select name="klasse" id="klasse">
 <?php print("<option value=''>velg klasse</option>");
-include("PRG120VXL/dynamiske-funksjoner.php"); listeboksKlasse(); ?> 
+include("dynamiske-funksjoner.php"); listeboksKlasse(); ?> 
   </select>  <br/>
   <input type="submit" value="Velg klasse" id="velgklasseKnapp" name="velgKlasseKnapp" /> 
 </form>
