@@ -13,9 +13,7 @@ include("dynamiske-funksjoner.php");
   brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
   fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
   etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
-
-  <form method="post" action="" id="slettklasseSkjema" name="slettklasseSkjema" onSubmit="return bekreft()">
- Klasse <select name="klasse" id="klasse">
+ Klasse <select name="klassekode" id="klassekode">
 <?php print("<option value=''>velg klasse</option>");
   listeboksKlasse();?>
   </select>  <br/> 
