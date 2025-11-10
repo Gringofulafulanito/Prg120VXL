@@ -27,7 +27,7 @@ function listeboksstudent()
 {
   include("db-tilkobling.php");  /* tilkobling til database-server og valg av database utført */
       
-  $sqlSetning="SELECT * FROM student ORDER BY student;";
+  $sqlSetning="SELECT * FROM student ORDER BY brukernavn;";
   $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen"); 
     /* SQL-setning sendt til database-serveren */
 	
