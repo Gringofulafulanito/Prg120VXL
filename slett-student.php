@@ -20,9 +20,9 @@ include("dynamiske-funksjoner.php"); listeboksstudent(); ?>
 </form>
 
 <?php
-  if (isset($_POST ["slettStudentKnapp"]))
+  if (isset($_POST["slettStudentKnapp"]))
     {	
-      $student=$_POST ["student"];
+      $student=$_POST["student"];
 	  
 	  if (!$student)
         {
@@ -32,7 +32,7 @@ include("dynamiske-funksjoner.php"); listeboksstudent(); ?>
         {
           include("db-tilkobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
 
-          $sqlSetning="SELECT * FROM student WHERE student='$student';";
+          $sqlSetning="SELECT * FROM student WHERE brukernavn='$student';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
@@ -42,7 +42,7 @@ include("dynamiske-funksjoner.php"); listeboksstudent(); ?>
             }
           else
             {	  
-              $sqlSetning="DELETE FROM student WHERE student='$student';";
+              $sqlSetning="DELETE FROM student WHERE brukernavn='$student';";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
                 /* SQL-setning sendt til database-serveren */
 		
