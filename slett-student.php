@@ -12,8 +12,8 @@
 <form method="post" action="" id="slettStudentSkjema" name="slettStudentSkjema" onSubmit="return bekreft()">
  Student 
   <select name="student" id="student">
-    <option value="">velg student</option>
-<?php include("dynamiske-funksjoner.php"); listeboksstudent(); ?> 
+<?php print('<option value="">velg student</option>');
+include("dynamiske-funksjoner.php"); listeboksstudent(); ?> 
   </select>  <br/>
   <input type="submit" value="Velg student" id="velgStudentKnapp" name="velgStudentKnapp" /> 
   <input type="submit" value="Slett student" name="slettStudentKnapp" id="slettStudentKnapp" /> 

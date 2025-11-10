@@ -12,8 +12,8 @@
 <form method="post" action="" id="slettklasseSkjema" name="slettklasseSkjema" onSubmit="return bekreft()">
  Klasse
   <select name="klasse" id="klasse">
-    <option value="">velg klasse</option>
-<?php include("dynamiske-funksjoner.php"); listeboksKlasse(); ?> 
+<?php print("<option value=''>velg klasse</option>");
+include("dynamiske-funksjoner.php"); listeboksKlasse(); ?> 
   </select>  <br/>
   <input type="submit" value="Velg klasse" id="velgklasseKnapp" name="velgKlasseKnapp" /> 
 </form>
