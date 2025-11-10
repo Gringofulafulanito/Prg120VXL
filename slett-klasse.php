@@ -3,6 +3,7 @@
 /*  Programmet lager et skjema for å velge en klasse som skal slettes  
 /*  Programmet sletter det valgte klassen
 */
+include("dynamiske-funksjoner.php"); 
 ?> 
 
 <script src="funksjoner.js"> </script>
@@ -12,7 +13,7 @@
 <form method="post" action="" id="slettklasseSkjema" name="slettklasseSkjema" onSubmit="return bekreft()">
  Klasse <select name="klasse" id="klasse">
 <?php print("<option value=''>velg klasse</option>");
-  include("dynamiske-funksjoner.php"); listeboksKlasse();?> 
+  listeboksKlasse();?> 
   </select>  <br/> 
   rtfyguhij
   <input type="submit" value="Slett klasse" name="slettklasseKnapp" id="slettklasseKnapp" /> 
